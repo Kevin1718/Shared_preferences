@@ -184,10 +184,9 @@ class _RegistroState extends State<Registro> {
     _Login();
   }
 
-
   Future _Login() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    if (pref.getBool('_sesion')) {
+    if (pref.getBool('sesion')) {
       Navigator.push(context, MaterialPageRoute(builder: (context) {
         return new Scaffold(
           appBar: AppBar(
@@ -275,7 +274,7 @@ class _RegistroState extends State<Registro> {
             Padding(
               padding: const EdgeInsets.all(20),
               child: Text(
-                'Se ingresaron estos datos:',
+                'Esestos son los datos ingresados:',
                 style: TextStyle(fontSize: 21),
               ),
             ),
